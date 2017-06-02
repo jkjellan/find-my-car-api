@@ -1,9 +1,9 @@
 class CreateParkingSpots < ActiveRecord::Migration[5.0]
   def change
     create_table :parking_spots do |t|
-      t.float :latitude
-      t.float :longitude
-      t.boolean :current_spot
+      t.float :latitude, null: false
+      t.float :longitude, null: false
+      t.boolean :current_spot, null: false
       t.text :note
 
       t.timestamps
