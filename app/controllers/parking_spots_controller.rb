@@ -1,4 +1,4 @@
-class ParkingSpotsController < OpenReadController
+class ParkingSpotsController < ProtectedController
   before_action :set_parking_spot, only: [:show, :update, :destroy]
 
   # GET /parking_spots
@@ -16,7 +16,8 @@ class ParkingSpotsController < OpenReadController
 
   # POST /parking_spots
   def create
-    @parking_spot = ParkingSpot.new(parking_spot_params)
+    # @parking_spot = ParkingSpot.new(parking_spot_params)
+    @parking_spot = current_user.parking_spots.build(parking_spot_params)
 
     if @parking_spot.save
       render json: @parking_spot, status: :created, location: @parking_spot
