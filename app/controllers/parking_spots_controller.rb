@@ -43,7 +43,7 @@ class ParkingSpotsController < ProtectedController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_parking_spot
-      @parking_spot = ParkingSpot.find(params[:id])
+      @parking_spot = current_user.parking_spots.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
