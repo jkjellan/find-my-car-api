@@ -14,7 +14,7 @@ An API for my Find My Car parking application, based on the rails-api-template
 [Entity Relationship Diagram](http://i.imgur.com/pjJHECc.jpg)
 
 ## My Process
-I needed a relatively simple back-end to implement my idea. I knew I would need to store latitude and longitude, in order to place a marker on the map, and I also wanted the user to be able to store a note, providing useful details about the parking spot, such as if it is metered or not. To achieve this, I created a parking_spots table. A user has many parking spots, and a parking spot belongs to a user. I made sure that a user can only view and update parking spots they they created.
+I needed a relatively simple back-end to implement my idea. I knew I would need to store latitude and longitude, in order to place a marker on the map, and I also wanted the user to be able to store a note, providing useful details about the parking spot, such as if it is metered or not. To achieve this, I created a parking_spots table. A user has many parking spots, and a parking spot belongs to a user. I made sure that a user can only view and update parking spots that they created.
 
 ## Next steps
 I would love to add the ability for users to have multiple cars, which are each displayed with their own icons. I would need another table for this.
